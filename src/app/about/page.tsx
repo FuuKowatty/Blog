@@ -1,6 +1,11 @@
 import { ContactItem } from "@/components/ContactItem";
 import Image from "next/image";
 
+export function generateMetadata() {
+  return {
+    title: 'MyBlog - About Me'
+  }
+}
 
 export default function About() {
   return (

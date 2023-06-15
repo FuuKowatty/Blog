@@ -1,6 +1,12 @@
 import { getSortedPostsData } from "@/api/posts"
 import Post from "@/components/Post"
 
+export function generateMetadata() {
+  return {
+    title: 'MyBlog - Home'
+  }
+}
+
 export default function Home() {
 
   const posts = getSortedPostsData()

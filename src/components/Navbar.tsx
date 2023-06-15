@@ -22,7 +22,7 @@ export default function Navbar() {
   const currentRoute = usePathname()
 
   return (
-    <nav className='flex justify-between min-h-[80px] items-center px-4 border-b-gray-200 border-[1px] shadow-lg'>
+    <nav className='flex justify-between min-h-[80px] items-center px-4 border-b-gray-200 border-[1px] shadow-lg fixed left-0 top-0 w-full z-10 bg-white'>
       <Link href='/'><Image src={'/logo.png'} alt='logo' width={48} height={48}/></Link>
       <ul className='flex text-lg gap-2'>
         {pages.map(page => (
