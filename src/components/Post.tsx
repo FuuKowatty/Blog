@@ -1,4 +1,5 @@
-import getFormattedDate from "@/api/getFormatedDate"
+import {getFormattedDate} from "@/api/getFormatedDate"
+import Image from "next/image"
 import Link from "next/link"
 
 type Props = {
@@ -6,14 +7,17 @@ type Props = {
 }
 
 export default function Post({ post }: Props) {
-    const { id, title, date } = post
+    const { id, title, date, image } = post
     const formattedDate = getFormattedDate(date)
-
     return (
-        <li className="mt-4 text-2xl">
-            <Link className="underline hover:text-black/70 dark:hover:text-white" href={`/posts/${id}`}>{title}</Link>
-            <br />
-            <p className="text-sm mt-1">{formattedDate}</p>
+        <li >
+            <div className="mt-4 w-full m-auto text-2xl flex flex-col items-center px-4">
+                <div className="relative w-full h-[300px] bg-secondary">
+                    <Image src={image} alt={title + ' image'} fill={true} className="object-contain" />
+                </div>
+                <p className="text-sm mt-1 text-left w-full">{formattedDate}</p>
+                <Link className="underline hover:text-black/70 dark:hover:text-white" href={`/posts/${id}`}>{title}</Link>
+            </div>
         </li>
     )
 }

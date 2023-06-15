@@ -1,8 +1,7 @@
-import getFormattedDate from "@/api/getFormatedDate"
+import {getFormattedDate} from "@/api/getFormatedDate"
 import { getPostData, getSortedPostsData } from "@/api/posts"
 import { notFound } from 'next/navigation'
 import Link from "next/link"
-import Image from "next/image"
 import Author from "@/components/Author"
 
 type Props = {
