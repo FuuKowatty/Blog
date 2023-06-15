@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    padding-top: 80px;
-}
 
 @layer base {
     h1 {
@@ -24,6 +21,6 @@ body {
     }
 
     pre {
-        @apply bg-[#f9f9f9] border-gray-200 border-[1px] text-[0.875rem] p-4
+        @apply  border-gray-200 border-[1px] text-[0.875rem] p-4
     }
 }

@@ -3,6 +3,7 @@ import { getPostData, getSortedPostsData } from "@/api/posts"
 import { notFound } from 'next/navigation'
 import Link from "next/link"
 import Author from "@/components/Author"
+import { BackButton } from "@/components/BackButton"
 
 type Props = {
     params: {
@@ -36,9 +37,7 @@ export default async function PostPage({params : {postId}}: Props) {
                 <Author pubDate={pubDate}/>
                 <section className="text-lg" dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </article>
-            <div className="fixed top-[100px] left-2">
-                <Link href="/"><span className="border-gray-200 border-[1px] rounded-md py-1 px-2 bg-white hover:bg-secondary">← Back to home</span></Link>
-            </div>
+            <BackButton />
         </main>
     )
 }

@@ -1,3 +1,4 @@
+import { BackButton } from "@/components/BackButton";
 import { ContactItem } from "@/components/ContactItem";
 import Image from "next/image";
 
@@ -9,8 +10,11 @@ export function generateMetadata() {
 
 export default function About() {
   return (
+
+    <>
+    <h1 className="text-center mt-[60px]">About Me</h1>
     <div className="w-full max-w-[640px] m-auto grid place-items-center px-4 mt-4 xl:mt-[120px] gap-2 xl:grid-cols-2 xl:grid-rows-2 xl:max-w-[1000px]">
-      <div className="relative w-[250px] sm:w-[370px] h-[250px] sm:h-[370px] rounded-full border-2 border-gray-200 overflow-hidden col-span-1 row-span-2">
+      <div className="relative w-[250px] sm:w-[370px] h-[250px] sm:h-[370px] rounded-full border-2 border-gray-200 overflow-hidden col-span-1 row-span-2 self-start">
         <Image 
           src='https://st4.depositphotos.com/11634452/21365/v/600/depositphotos_213659488-stock-illustration-picture-profile-icon-human-people.jpg'
           alt="profile picture"
@@ -20,11 +24,8 @@ export default function About() {
       <div className="xl:self-end">
       <span className="font-bold text-3xl">FuuKowatty</span>
       <p className="text-lg leading-5">
-        Hello!
-        With one year of frontend learning under my belt, I have a strong 
-        passion for both acquiring knowledge and teaching others. I enjoy 
-        sharing what I learn through writing articles on Medium, aiming to 
-        inspire and support fellow learners in their journey.
+        My name is Bartosz Mech, a passionate 20-year-old aspiring Frontend Developer. I have been immersed in the world of frontend development for over a year now, constantly honing my skills and expanding my knowledge.
+        As I strive to become a Senior Frontend Developer, I&apos;m fueled by my unwavering passion and enthusiasm. I view each line of code as an opportunity to make a positive impact, to create delightful experiences for users, and to contribute to the ever-growing digital landscape.
       </p>
       </div>
       <div className="w-full xl:self-start">
@@ -46,6 +47,8 @@ export default function About() {
         />
         
       </div>
+      <BackButton />
     </div>
+    </>
   )
 }
