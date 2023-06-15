@@ -12,6 +12,9 @@ module.exports = {
         'primary': '#131313',
         'secondary': '#e4e6ec',
         'stands': '#e56a96',
+      },
+      fontFamily: {
+        'sans': ['Segoe UI'],
       }
     }
   },
