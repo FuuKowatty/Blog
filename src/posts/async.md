@@ -1,6 +1,6 @@
 ---
   title: 'Async/Await: Effective Asynchronous Management in JavaScript'
-  image: 'https://images.unsplash.com/photo-1591267990532-e5bdb1b0ceb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1127&q=80'
+  image: 'https://i.imgur.com/BB1BWzE.jpg'
   date: '2023-05-29'
 ---
 Asynchronous is an inherent part of JavaScript, particularly when it comes to network operations, data fetching, and user interface manipulation. Traditionally, developers have used callbacks and promises to handle asynchronous code. However, since the introduction of async/await in ECMAScript 2017, programmers have had access to new and more expressive tools for managing asynchronous operations.

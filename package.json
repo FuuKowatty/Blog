@@ -1,5 +1,8 @@
 {
-  "name": "next02-blog",
+  "name": "myblog",
+  "author": "FuuKowatty",
+  "email": "bartoszmech0@gmail.com",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "scripts": {

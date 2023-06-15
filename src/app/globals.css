@@ -21,6 +21,6 @@
     }
 
     pre {
-        @apply  border-gray-200 border-[1px] text-[0.875rem] p-4
+        @apply border-gray-200 border-[1px] text-[0.875rem] p-4
     }
 }

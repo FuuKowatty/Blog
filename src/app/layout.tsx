@@ -5,11 +5,6 @@ import './globals.css'
 import { useState } from 'react'
 import { DarkModeToggle } from '@/components/DarkModeButton'
 
-export const metadata = {
-  title: 'MyBlog',
-  description: 'This is blog of FuuKowatty',
-}
-
 export default function RootLayout({
   children,
 }: {
