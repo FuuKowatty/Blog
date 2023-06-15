@@ -3,7 +3,8 @@ import Post from "@/components/Post"
 
 export function generateMetadata() {
   return {
-    title: 'MyBlog - Home'
+    title: 'MyBlog - Home',
+    description: 'blog page about my passion'
   }
 }
 

@@ -13,7 +13,7 @@ export default function About() {
 
     <>
     <h1 className="text-center mt-[60px]">About Me</h1>
-    <div className="w-full max-w-[640px] m-auto grid place-items-center px-4 mt-4 xl:mt-[120px] gap-2 xl:grid-cols-2 xl:grid-rows-2 xl:max-w-[1000px]">
+    <section className="w-full max-w-[640px] m-auto grid place-items-center px-4 mt-4 xl:mt-[120px] gap-2 xl:grid-cols-2 xl:grid-rows-2 xl:max-w-[1000px]">
       <div className="relative w-[250px] sm:w-[370px] h-[250px] sm:h-[370px] rounded-full border-2 border-gray-200 overflow-hidden col-span-1 row-span-2 self-start">
         <Image 
           src='https://st4.depositphotos.com/11634452/21365/v/600/depositphotos_213659488-stock-illustration-picture-profile-icon-human-people.jpg'
@@ -48,7 +48,7 @@ export default function About() {
         
       </div>
       <BackButton />
-    </div>
+    </section>
     </>
   )
 }
