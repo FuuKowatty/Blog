@@ -31,6 +31,7 @@ For example:
  padding: 10px;
 }
 ```
+![grid-columns](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Qq0bBYgvHRsMQ8klV355sw.png)
 In this example, the grid-template-columns property is set to 1fr 2fr 1fr, which means the available horizontal space will be divided into three equal parts. The first and third columns will take up one fractional unit each, while the second column will take up two fractional units. This creates a 1:2:1 ratio, with the middle column occupying twice as much space as the other columns. But what is free space wont be available?
 ```css
 .grid-container {
@@ -43,6 +44,7 @@ In this example, the grid-template-columns property is set to 1fr 2fr 1fr, which
  padding: 10px;
 }
 ```
+![grid-columns](https://miro.medium.com/v2/resize:fit:640/format:webp/1*RxkpbLukcCoQHpXLGvH14A.png)
 When using the fr unit in CSS Grid, it will distribute the remaining space equally among the columns or rows. However, if there is not enough remaining space to accommodate the specified proportions defined by the fr unit, it will fall back to the minimum content size.
 ## Gridbox Techniques
 Grid Template Areas: Grid Template Areas allow you to create complex layouts by defining named grid areas. This technique is particularly useful for creating magazine-style layouts or sectioned pages. By assigning specific grid areas to grid items, you can easily control their placement and visual hierarchy. For example:
@@ -83,6 +85,7 @@ Grid Template Areas: Grid Template Areas allow you to create complex layouts by 
  background: gray;
 }
 ```
+![grid-columns](https://miro.medium.com/v2/resize:fit:640/format:webp/1*bqQH1dA9k4451BeCbQAIzQ.png)
 ### Grid Auto-Fit and Grid Auto-Fill
 These powerful features allow the grid to automatically adjust the number of columns based on the available space. Grid Auto-Fit creates as many columns as possible within the container, while Grid Auto-Fill creates fixed-width columns and fills the available space. These techniques are perfect for responsive designs where the number of columns needs to adapt to different screen sizes. For example:
 ```html
@@ -103,7 +106,9 @@ These powerful features allow the grid to automatically adjust the number of col
 .grid-item {
   background: lightblue
 }
-
+```
+![grid-columns](https://miro.medium.com/v2/resize:fit:640/format:webp/1*0kFAkAOaKJEI_om0ajWwyg.png)
+```css
 .grid-container {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -121,6 +126,7 @@ These powerful features allow the grid to automatically adjust the number of col
  width: 500px;
 }
 ```
+![grid-columns](https://miro.medium.com/v2/resize:fit:720/format:webp/1*gcg-zKtaN9KoQgl7-7bWdg.png)
 Like you see while your width is not specified auto-fill property will try to contain as many as possible items in single column while auto-fit will utilize all available space.
 ## Summary
 The article explores advanced techniques for utilizing CSS Grid to its fullest potential, enabling front-end developers to create stunning and dynamic layouts that push the boundaries of web design. It begins with a brief recap of the basics of CSS Grid, focusing on Gridbox, a two-dimensional grid system consisting of a parent container (grid container) and its child elements (grid items). The fr unit (fractional unit) is introduced, which allows for the distribution of remaining space within the parent element.
