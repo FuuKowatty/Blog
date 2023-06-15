@@ -1,4 +1,4 @@
-import { getSortedPostsData } from "@/api/posts"
+import { getSortedPostsData } from "@/lib/posts"
 import Post from "@/components/Post"
 
 export function generateMetadata() {

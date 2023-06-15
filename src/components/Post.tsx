@@ -1,4 +1,4 @@
-import {getFormattedDate} from "@/api/getFormatedDate"
+import {getFormattedDate} from "@/lib/getFormatedDate"
 import Image from "next/image"
 import Link from "next/link"
 

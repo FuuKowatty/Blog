@@ -1,5 +1,5 @@
-import {getFormattedDate} from "@/api/getFormatedDate"
-import { getPostData, getSortedPostsData } from "@/api/posts"
+import {getFormattedDate} from "@/lib/getFormatedDate"
+import { getPostData, getSortedPostsData } from "@/lib/posts"
 import { notFound } from 'next/navigation'
 import Link from "next/link"
 import Author from "@/components/Author"
