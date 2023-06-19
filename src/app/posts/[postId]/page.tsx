@@ -1,8 +1,7 @@
 import {getFormattedDate} from "@/lib/getFormatedDate"
 import { getPostData, getSortedPostsData } from "@/lib/posts"
 import { notFound } from 'next/navigation'
-import Link from "next/link"
-import Author from "@/components/Author"
+import {Author} from "@/components/Author"
 import { BackButton } from "@/components/BackButton"
 
 type Props = {
@@ -33,7 +32,7 @@ export default async function PostPage({params : {postId}}: Props) {
     return (
         <main className="max-w-[680px] m-auto mt-[60px]">
             <article>
-                <h1 className="">{title}</h1>
+                <h1 className="text-left">{title}</h1>
                 <Author pubDate={pubDate}/>
                 <section className="text-lg" dangerouslySetInnerHTML={{ __html: contentHtml }} />
             </article>

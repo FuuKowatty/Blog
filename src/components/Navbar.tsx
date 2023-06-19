@@ -18,12 +18,12 @@ const pages = [
   },
 ]
 
-export default function Navbar({children} : {children: React.ReactNode}) {
+export function Navbar({children} : {children: React.ReactNode}) {
 
   const currentRoute = usePathname()
 
   return (
-    <nav className='flex justify-between min-h-[80px] items-center px-4 lg:px-10 border-b-gray-200 border-b-[1px] shadow-lg fixed left-0 top-0 w-full z-10 gap-4 dark:border-b-gray-800 bg-white dark:bg-gray-900'>
+    <nav className='flex justify-between min-h-[80px] items-center px-4 lg:px-10 fixed left-0 top-0 w-full z-10 gap-4 bg-white dark:bg-darkGray'>
       <Link href='/'><Image src={'/logo.png'} alt='logo' width={48} height={48}/></Link>
       {children}
       <ul className='flex text-lg gap-2'>

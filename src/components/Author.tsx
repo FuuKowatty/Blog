@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export default function Author({pubDate} : {pubDate: string}) {
+export function Author({pubDate} : {pubDate: string}) {
   return (
     <div className="flex gap-2 items-center my-4">
       <Link href='/about'>
