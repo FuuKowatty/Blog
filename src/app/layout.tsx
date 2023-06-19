@@ -17,8 +17,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={mode === 'light' ? 'dark' : 'light'}>
-      <body className={`font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black px-4` }>
+    <html lang="en" className={`${mode === 'light' ? 'dark' : 'light'} `}>
+      <body className={`font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black px-4 transition-colors duration-300` }>
           <Navbar>
             <DarkModeToggle mode={mode} toggle={toggle}/>
           </Navbar>

@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 export function NewsLetter() {
   return (
-    <section className="max-w-[880px] m-auto p-12 border-[1px] border-lightGray mt-24">
+    <section className="max-w-[880px] m-auto p-12 md:border-[1px] md:border-lightGray mt-24">
       <h1>Newsletter</h1>
       <Image
         src="https://svgshare.com/i/uRE.svg"

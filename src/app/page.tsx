@@ -28,11 +28,11 @@ export default function Home() {
           <Button>@FuuK <BsMedium className="inline"/></Button>
         </div>
       </header>
-      <main className="mx-auto max-w-2xl 2xl:max-w-[1280px]">
+      <main className="m-auto 2xl:max-w-[1280px]">
             <NewsLetter />
             <section className="w-full mt-24">
               <h1>Posts</h1>
-                <div className="grid 2xl:grid-cols-2 gap-3">
+                <div className="mt-12 grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
                   {posts.map(post => (
                       <Post key={post.id} post={post} />
                   ))}

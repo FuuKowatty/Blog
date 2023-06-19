@@ -1,6 +1,6 @@
 ---
-    title: 'Understanding the Difference Between var, let, and const in JavaScript'
-    image: 'https://i.imgur.com/hGU6ObE.jpg'
+    title: 'Understanding the Difference Between var, let, and const'
+    image: 'https://i.imgur.com/eESwuSG.png'
     date: '2023-05-26'
 ---
 ## Introduction 

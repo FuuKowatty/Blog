@@ -1,6 +1,6 @@
 ---
-title: 'Understanding Pass-by-Value and Pass-by-Reference in JavaScript'
-image: 'https://i.imgur.com/sP1U9eL.jpg'
+title: 'Understanding Pass-by-Value and Pass-by-Reference'
+image: 'https://i.imgur.com/4GZg8Qb.png'
 date: '2023-05-28'
 ---
 

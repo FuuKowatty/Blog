@@ -1,6 +1,6 @@
 ---
   title: 'Advanced Gridbox Usage: Unleashing the Full Potential of CSS Grid'
-  image: 'https://i.imgur.com/U7aExmP.png'
+  image: 'https://i.imgur.com/54GsLmp.png'
   date: '2023-06-13'
 ---
 
