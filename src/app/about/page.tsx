@@ -5,6 +5,7 @@ import { AiFillHome } from "react-icons/ai";
 import { CgSoftwareDownload } from "react-icons/cg";
 import { ButtonConfirm } from "@/components/Buttons/ButtonConfirm";
 import { ContactItem } from "@/components/ContactItem";
+import { BackButton } from "@/components/Buttons/BackButton";
 export function generateMetadata() {
   return {
     title: "MyBlog - About Me",
@@ -74,7 +75,7 @@ export default function About() {
           </span>
         </div>
       </section>
-      <section className="mt-24 max-w-[880px] m-auto px-4">
+      <section className="mt-24 max-w-[920px] m-auto px-4">
         <h1>Contact</h1>
         <span className="text-xl mt-12 mb-6 block">
           You can contact me through my socials:
@@ -95,6 +96,7 @@ export default function About() {
           value="@FuuKowatty"
         />
       </section>
+      <BackButton />
     </>
   );
 }
