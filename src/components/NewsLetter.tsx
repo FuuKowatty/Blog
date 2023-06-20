@@ -1,9 +1,19 @@
+"use client"
+
 import Image from "next/image";
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { Modal } from "./Modal";
+import { ButtonConfirm } from "./Buttons/ButtonConfirm";
+import { useModal } from "@/hooks/useModal";
+import { useRef } from "react";
 
 export function NewsLetter() {
+  const { isModalOpen, isClosing, openModal, closeModal } = useModal()
+  const handleCloseModal = () => {
+    closeModal()
+  }
+
   return (
-    <section className="max-w-[880px] m-auto p-12 md:border-[1px] md:border-lightGray mt-24">
+    <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray mt-24 md:p-12">
       <h1>Newsletter</h1>
       <Image
         src="https://svgshare.com/i/uRE.svg"
@@ -34,10 +44,17 @@ export function NewsLetter() {
           skillset as a developer
         </li>
       </ul>
-      <form className="mt-8 flex gap-2">
-        <input type="email" aria-label='email'  className="dark:bg-darkGray border-[1px] border-silver rounded-md p-2 w-full" placeholder="example@gmail.com"/>
-        <button className="px-4 py-2 bg-lightBlue font-bold rounded-md text-white">Subscribe!</button>
+      <form className="mt-8 flex gap-2" onSubmit={openModal}>
+          <input type="email" aria-label='email'  className="dark:bg-darkGray border-[1px] border-silver rounded-md p-2 w-full" placeholder="example@gmail.com" required/>
+          <ButtonConfirm>Subscribe!</ButtonConfirm>
       </form>
+      {isModalOpen && 
+        <Modal 
+          title='Subscribed!'
+          description='Congratulations! You have subscribed my newsletter'
+          onClose={handleCloseModal} 
+          isClosing={isClosing}
+        />}
     </section>
   );
 }

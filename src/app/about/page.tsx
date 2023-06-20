@@ -1,4 +1,4 @@
-import { BackButton } from "@/components/BackButton";
+import { BackButton } from "@/components/Buttons/BackButton";
 import { ContactItem } from "@/components/ContactItem";
 import Image from "next/image";
 

@@ -4,8 +4,9 @@
 
 
 @layer base {
+
     h1 {
-        @apply text-4xl font-bold px-4 text-center
+        @apply text-4xl font-bold text-center
     }
 
     h2 {
@@ -23,5 +24,4 @@
     pre {
         @apply border-gray-200 border-[1px] text-[0.875rem] p-4
     }
-
 }

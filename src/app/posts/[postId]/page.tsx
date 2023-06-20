@@ -2,7 +2,7 @@ import {getFormattedDate} from "@/lib/getFormatedDate"
 import { getPostData, getSortedPostsData } from "@/lib/posts"
 import { notFound } from 'next/navigation'
 import {Author} from "@/components/Author"
-import { BackButton } from "@/components/BackButton"
+import { BackButton } from "@/components/Buttons/BackButton"
 
 type Props = {
     params: {

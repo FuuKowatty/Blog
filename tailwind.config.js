@@ -28,6 +28,20 @@ module.exports = {
           letterSpacing: 0,
           fontWeight: 600
         }],
+      },
+      keyframes: {
+        open: {
+          '0%': {opacity: 0, transform: 'scale(0.6)'},
+          '100%': {opacity: 1, transform: 'scale(1)'},
+        },
+        close: {
+          '0%': {opacity: 1, transform: 'scale(1)'},
+          '100%': {opacity: 0, transform: 'scale(0.6)'},
+        },
+      },
+      animation: {
+        open: 'open 0.3s ease-out',
+        close: 'close 0.4s ease-in',
       }
     }
   },
