@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar'
 import './globals.css'
 import { useState } from 'react'
 import { DarkModeToggle } from '@/components/DarkModeButton'
+import Footer from '@/components/Footer'
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
             <DarkModeToggle mode={mode} toggle={toggle}/>
           </Navbar>
           {children}
+          <Footer />
       </body>
     </html>
   )

@@ -15,7 +15,7 @@ export function NewsLetter() {
   }
 
   return (
-    <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray mt-24 md:p-12">
+    <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray md:dark:border-silver mt-24 md:p-12">
       <h1>Newsletter</h1>
       <Image
         src="https://svgshare.com/i/uRE.svg"
