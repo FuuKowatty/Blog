@@ -7,9 +7,11 @@ import { useModal } from "@/hooks/useModal";
 import { useRef } from "react";
 
 export function NewsLetter() {
+  const formElement = useRef<HTMLFormElement>(null)
   const { isModalOpen, isClosing, openModal, closeModal } = useModal()
-  const handleCloseModal = () => {
-    closeModal()
+  const handleCloseModal = (event: any) => {
+    formElement?.current?.reset()
+    closeModal();
   }
 
   return (
@@ -44,7 +46,7 @@ export function NewsLetter() {
           skillset as a developer
         </li>
       </ul>
-      <form className="mt-8 flex gap-2" onSubmit={openModal}>
+      <form className="mt-8 flex gap-2" onSubmit={openModal} ref={formElement}>
           <input type="email" aria-label='email'  className="dark:bg-darkGray border-[1px] border-silver rounded-md p-2 w-full" placeholder="example@gmail.com" required/>
           <ButtonConfirm>Subscribe!</ButtonConfirm>
       </form>
