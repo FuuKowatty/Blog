@@ -3,7 +3,6 @@ import { Post } from "@/components/Post"
 import { ButtonLink } from "@/components/Buttons/ButtonLink"
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { BsMedium } from 'react-icons/bs'
-import Image from "next/image"
 import { NewsLetter } from "@/components/NewsLetter"
 
 

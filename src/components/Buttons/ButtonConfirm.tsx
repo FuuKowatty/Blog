@@ -1,7 +1,13 @@
-import React from 'react'
 
-export function ButtonConfirm({children} : {children: React.ReactNode}) {
+
+type ButtonProps = {
+  children: React.ReactNode,
+  href?: any,
+  download?: boolean,
+}
+
+export function ButtonConfirm({children, href} : ButtonProps) {
   return (
-    <button className="px-4 py-2 bg-lightBlue font-bold rounded-md text-white hover:bg-blue-600 transition-colors duration-300 ease-in-out">{children}</button>
+    <a download={true} target="_blank" href={href} role="button" aria-label="button-confirm" className="px-4 py-2 bg-lightBlue font-bold rounded-md text-white hover:bg-blue-600 transition-colors duration-300 ease-in-out flex gap-1 items-center w-min">{children}</a>
   )
 }
