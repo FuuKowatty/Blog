@@ -4,15 +4,16 @@ import Image from "next/image";
 import { Modal } from "./Modal";
 import { ButtonConfirm } from "./Buttons/ButtonConfirm";
 import { useModal } from "@/hooks/useModal";
-import { useRef } from "react";
+import { MouseEvent, useRef } from "react";
 
 export function NewsLetter() {
   const formElement = useRef<HTMLFormElement>(null)
   const { isModalOpen, isClosing, openModal, closeModal } = useModal()
-  const handleCloseModal = (event: any) => {
+  const handleCloseModal = (event: MouseEvent<HTMLButtonElement>) => {
     formElement?.current?.reset()
     closeModal();
   }
+
 
   return (
     <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray md:dark:border-silver mt-24 md:p-12">

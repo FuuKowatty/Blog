@@ -2,11 +2,11 @@ import { ButtonLink } from "@/components/Buttons/ButtonLink";
 import { Header } from "@/components/Header";
 import { BsMedium } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
-import { CgSoftwareDownload } from "react-icons/cg";
 import { ButtonConfirm } from "@/components/Buttons/ButtonConfirm";
 import { ContactItem } from "@/components/ContactItem";
 import { BackButton } from "@/components/Buttons/BackButton";
 import Resume from 'resume.pdf'
+import { ButtonResume } from "@/components/Buttons/ButtonResume";
 
 export function generateMetadata() {
   return {
@@ -71,9 +71,7 @@ export default function About() {
             </div>
           </div>
           <span className="mt-6 block">
-            <ButtonConfirm href="/_documents/resume.pdf">
-              Resume.pdf <CgSoftwareDownload size="1.25em" />
-            </ButtonConfirm>
+            <ButtonResume />
           </span>
         </div>
       </section>

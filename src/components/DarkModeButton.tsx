@@ -14,7 +14,7 @@ export function DarkModeToggle() {
       <div><BsFillMoonFill /></div>
       <div
         className={`w-[18px] h-[18px] border-[3px] border-blue-300 bg-lightBlue rounded-full absolute`}
-        style={theme === "dark" ? { left: "2px" } : { right: "2px" }}
+        style={theme === "light" ? { left: "2px" } : { right: "2px" }}
       />
     </div>
   );
