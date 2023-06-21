@@ -1,15 +1,15 @@
 "use client"
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import lightTheme from "react-syntax-highlighter/dist/esm/styles/prism/coldark-cold"
+import lightTheme from "react-syntax-highlighter/dist/esm/styles/prism/one-light"
 import darkTheme from "react-syntax-highlighter/dist/esm/styles/prism/one-dark"
 import {FaRegCopy} from 'react-icons/fa'
-import { ThemeContext } from '@/context/ThemeContext';
+import { useTheme } from "next-themes";
 
-export default function CodeCopyBtn({ children }:any) {
+function CodeCopyBtn({ children }: {children: any}) {
   const [isCoping, setIsCoping] = useState(false);
-  const handleClick = (e:any) => {
+  const handleClick = (e: any) => {
       navigator.clipboard.writeText(children[0].props.children[0]);
       setIsCoping(true);
       setTimeout(() => {
@@ -29,9 +29,10 @@ export default function CodeCopyBtn({ children }:any) {
 
 export function FormattedArticle({contentHtml} : any) {
 
-  const {theme} = useContext(ThemeContext)
+  const {theme} = useTheme()
+  const isDark = theme === 'dark' ?  true : false
 
-  const Pre = ({ children }:any) => <pre className="relative">
+  const Pre = ({ children }: {children: React.ReactNode}) => <pre className="relative border-[1px] border-lightGray dark:border-silver">
   <CodeCopyBtn>{children}</CodeCopyBtn>
   {children}
 </pre>
@@ -43,7 +44,7 @@ export function FormattedArticle({contentHtml} : any) {
         const match = /language-(\w+)/.exec(className || "");
         return !inline && match ? (
           <SyntaxHighlighter language={match[1]}
-            style={theme === 'light' ? lightTheme : darkTheme}
+            style={isDark ? darkTheme : lightTheme}
           >
             {String(children).replace(/\n$/, "")}
           </SyntaxHighlighter>

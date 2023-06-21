@@ -5,6 +5,14 @@
 
 @layer base {
 
+    html {
+        @apply overflow-x-hidden mr-[calc(-1*(100vw-100%))] {/*dont move scroll after open modal */}
+    }
+
+    body {
+        @apply font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black transition-colors duration-300
+    }
+
     h1 {
         @apply text-4xl font-bold text-center
     }
@@ -22,7 +30,7 @@
     }
 
     pre {
-        @apply pt-[20px] bg-[#e3eaf2] dark:bg-[#282c34]
+        @apply pt-[20px] dark:bg-[#282c34]
     }
 
     span {
