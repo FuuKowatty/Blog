@@ -45,6 +45,7 @@ export function FormattedArticle({contentHtml} : any) {
         return !inline && match ? (
           <SyntaxHighlighter language={match[1]}
             style={isDark ? darkTheme : lightTheme}
+            className='text-sm md:text-base'
           >
             {String(children).replace(/\n$/, "")}
           </SyntaxHighlighter>

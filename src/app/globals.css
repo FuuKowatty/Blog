@@ -30,7 +30,7 @@
     }
 
     pre {
-        @apply pt-[20px] dark:bg-[#282c34]
+        @apply pt-[30px] dark:bg-[#282c34]
     }
 
     span {
