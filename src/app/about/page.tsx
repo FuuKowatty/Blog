@@ -6,6 +6,8 @@ import { CgSoftwareDownload } from "react-icons/cg";
 import { ButtonConfirm } from "@/components/Buttons/ButtonConfirm";
 import { ContactItem } from "@/components/ContactItem";
 import { BackButton } from "@/components/Buttons/BackButton";
+import Resume from 'resume.pdf'
+
 export function generateMetadata() {
   return {
     title: "MyBlog - About Me",
