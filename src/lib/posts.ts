@@ -40,19 +40,16 @@ export async function getPostData(id: string) {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    const metadataRegex = /^---\n[\s\S]+?\n---\n/;
+    const contentWithoutMetadata = matterResult.content.replace(metadataRegex, '');
 
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-
-    const contentHtml = processedContent.toString();
 
     const blogPostWithHTML: BlogPost & { contentHtml: string } = {
         id,
         title: matterResult.data.title,
         date: matterResult.data.date,
         image: matterResult.data.image,
-        contentHtml,
+        contentHtml: contentWithoutMetadata,
     }
 
     // Combine the data with the id

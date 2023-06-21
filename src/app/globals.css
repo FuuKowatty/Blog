@@ -22,6 +22,20 @@
     }
 
     pre {
-        @apply border-gray-200 border-[1px] text-[0.875rem] p-4
+        @apply pt-[20px] bg-[#e3eaf2] dark:bg-[#282c34]
     }
+
+    span {
+        @apply whitespace-pre-wrap break-words
+    }
+}
+
+ol li {
+    list-style-type: symbol;
+    margin-left: 15px;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-left: 15px;
 }

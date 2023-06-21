@@ -42,7 +42,7 @@ module.exports = {
       animation: {
         open: 'open 0.3s ease-out',
         close: 'close 0.4s ease-in',
-      }
+      },
     }
   },
   plugins: [],

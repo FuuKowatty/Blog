@@ -1,50 +1,53 @@
-import {getFormattedDate} from "@/lib/getFormatedDate"
-import { getPostData, getSortedPostsData } from "@/lib/posts"
-import { notFound } from 'next/navigation'
-import {Author} from "@/components/Author"
-import { BackButton } from "@/components/Buttons/BackButton"
+import { getFormattedDate } from '@/lib/getFormatedDate';
+import { getPostData, getSortedPostsData } from '@/lib/posts';
+import { notFound } from 'next/navigation';
+import { Author } from '@/components/Author';
+import { BackButton } from '@/components/Buttons/BackButton';
+import { FormattedArticle } from '@/components/FormattedArticle';
+
 
 type Props = {
-    params: {
-        postId: string,
-    }
+  params: {
+    postId: string;
+  };
+};
+
+export function generateMetadata({ params: { postId } }: Props) {
+  return {
+    title: `post/${postId}`,
+  };
 }
 
-export function generateMetadata({params : {postId}}: Props) {
 
+export default async function PostPage({ params: { postId } }: Props) {
+  const posts = getSortedPostsData();
 
-    return {
-      title: `post/${postId}`
-    }
-  }
+  if (!posts.find((post) => post.id === postId)) notFound();
 
-export default async function PostPage({params : {postId}}: Props) {
+  const { title, date, contentHtml } = await getPostData(postId);
 
-    const posts = getSortedPostsData()
+  const pubDate = getFormattedDate(date);
 
+  return (
+    <main className="max-w-[680px] m-auto mt-[60px] px-4">
+      <article className='text-lg'>
+        <h1 className="text-left">{title}</h1>
+        <Author pubDate={pubDate} />
+        {contentHtml && (
+            <FormattedArticle contentHtml={contentHtml}/>
+        )}
 
-    if (!posts.find(post => post.id === postId)) notFound()
-
-    const { title, date, contentHtml } = await getPostData(postId)
-
-    const pubDate = getFormattedDate(date)
-
-    return (
-        <main className="max-w-[680px] m-auto mt-[60px]">
-            <article>
-                <h1 className="text-left">{title}</h1>
-                <Author pubDate={pubDate}/>
-                <section className="text-lg" dangerouslySetInnerHTML={{ __html: contentHtml }} />
-            </article>
-            <BackButton />
-        </main>
-    )
+      </article>
+      <BackButton />
+    </main>
+  ) as JSX.Element;
+  
 }
 
 export function generateStaticParams() {
-    const posts = getSortedPostsData()
+  const posts = getSortedPostsData();
 
-    return posts.map((post) => ({
-        postId: post.id
-    }))
+  return posts.map((post) => ({
+    postId: post.id,
+  }));
 }

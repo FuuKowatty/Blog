@@ -2,9 +2,9 @@
 
 import { Navbar } from '@/components/Navbar'
 import './globals.css'
-import { useState } from 'react'
 import { DarkModeToggle } from '@/components/DarkModeButton'
 import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/context/ThemeContext'
 
 export default function RootLayout({
   children,
@@ -12,22 +12,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [mode, setMode] = useState<'light' | 'dark'>('light')
-  const toggle = () => {
-    setMode(mode === 'light' ? 'dark' : 'light');
-  }
-
   return (
-    <html lang="en" className={`${mode === 'light' ? 'dark' : 'light'} overflow-x-hidden mr-[calc(-1*(100vw-100%))]` }> {/*dont move scroll after open modal */}
+    <html lang="en" className={`overflow-x-hidden mr-[calc(-1*(100vw-100%))]` }> {/*dont move scroll after open modal */}
+      <ThemeProvider>
       <body className={`font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black transition-colors duration-300` }
       suppressHydrationWarning={true}
       >
           <Navbar>
-            <DarkModeToggle mode={mode} toggle={toggle}/>
+            <DarkModeToggle />
           </Navbar>
           {children}
           <Footer />
       </body>
+      </ThemeProvider>
     </html>
   )
 }
