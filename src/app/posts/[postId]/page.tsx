@@ -40,7 +40,7 @@ export default async function PostPage({ params: { postId } }: Props) {
       </article>
       <BackButton />
     </main>
-  ) as JSX.Element;
+  );
   
 }
 

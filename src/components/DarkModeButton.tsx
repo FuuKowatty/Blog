@@ -13,8 +13,7 @@ export function DarkModeToggle() {
       <div><BsFillSunFill /></div>
       <div><BsFillMoonFill /></div>
       <div
-        className={`w-[18px] h-[18px] border-[3px] border-blue-300 bg-lightBlue rounded-full absolute`}
-        style={theme === "light" ? { left: "2px" } : { right: "2px" }}
+        className={`w-[18px] h-[18px] border-[3px] border-blue-300 bg-lightBlue rounded-full absolute left-[2px] dark:left-auto right-auto dark:right-[2px] animate-open`}
       />
     </div>
   );

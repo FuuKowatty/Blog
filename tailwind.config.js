@@ -38,10 +38,33 @@ module.exports = {
           '0%': {opacity: 1, transform: 'scale(1)'},
           '100%': {opacity: 0, transform: 'scale(0.6)'},
         },
+        slideLeftToRight: {
+          '0%': {
+            left: '2px',
+            right: 'auto',
+          },
+          '100%': {
+            right: '2px',
+            left: 'auto',
+          }
+        },
+        slideRightToLeft: {
+          '0%': {
+            right: '2px',
+            left: 'auto',
+          },
+          '100%': {
+            left: '2px',
+            left: 'auto',
+          }
+        }
+
       },
       animation: {
         open: 'open 0.3s ease-out',
         close: 'close 0.4s ease-in',
+        slideLeftToRight: 'slideLeftToRight 1.3s ease-out',
+        slideRightToLeft: 'slideRightToLeft 1.3s ease-out',
       },
     }
   },
