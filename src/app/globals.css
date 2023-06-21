@@ -10,7 +10,7 @@
     }
 
     body {
-        @apply font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black transition-colors duration-300
+        @apply font-sans pt-[80px] bg-white dark:bg-darkGray dark:text-lightGray text-black
     }
 
     h1 {
