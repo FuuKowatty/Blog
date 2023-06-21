@@ -71,7 +71,7 @@ export default function About() {
             </div>
           </div>
           <span className="mt-6 block">
-            <ButtonConfirm href="/_documents/Resume.pdf">
+            <ButtonConfirm href="/_documents/resume.pdf">
               Resume.pdf <CgSoftwareDownload size="1.25em" />
             </ButtonConfirm>
           </span>
