@@ -2,10 +2,8 @@ import { ButtonLink } from "@/components/Buttons/ButtonLink";
 import { Header } from "@/components/Header";
 import { BsMedium } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
-import { ButtonConfirm } from "@/components/Buttons/ButtonConfirm";
 import { ContactItem } from "@/components/ContactItem";
 import { BackButton } from "@/components/Buttons/BackButton";
-import Resume from 'resume.pdf'
 import { ButtonResume } from "@/components/Buttons/ButtonResume";
 
 export function generateMetadata() {
