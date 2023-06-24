@@ -52,23 +52,18 @@ Your project utilizes the next.js 13 framework, which enables static site genera
 </br>
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
 </br>
 
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
 </br>
 
 [![Gray Matter](https://img.shields.io/badge/Gray%20Matter-6e81cc?style=flat-square)](https://github.com/jonschlinkert/gray-matter)
-
 </br>
 
 [![Next Themes](https://img.shields.io/badge/Next%20Themes-000000?style=flat-square)](https://github.com/pacocoursey/next-themes)
-
 </br>
 
 [![React Markdown](https://img.shields.io/badge/React%20Markdown-61DAFB?style=flat-square&logo=markdown&logoColor=white)](https://github.com/remarkjs/react-markdown)
-
 </br>
 
 [![React Syntax Highlighter](https://img.shields.io/badge/React%20Syntax%20Highlighter-2B3137?style=flat-square&logo=react&logoColor=61DAFB)](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
