@@ -1,3 +1,11 @@
-export function getFormattedDate(dateString: string): string {
-    return new Intl.DateTimeFormat('en-US').format(new Date(dateString))
-}
+  export function getFormattedDate(dateString: string): string {
+    const options: Intl.DateTimeFormatOptions = {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    };
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(dateString));
+  
+    return formattedDate;
+  }
+  
