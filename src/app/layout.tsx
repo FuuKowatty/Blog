@@ -3,6 +3,8 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import { DarkModeToggle } from '@/components/Buttons/DarkModeButton'
 import Providers from './providers'
+import { TransitonAnimationHandler } from '@/components/TransitonAnimationHandler'
+
 
 
 export default function RootLayout({
@@ -10,9 +12,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en"> 
       <body>
+          <TransitonAnimationHandler />
           <Providers>
             <Navbar>
               <DarkModeToggle />
