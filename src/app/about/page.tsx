@@ -54,17 +54,14 @@ export default function About() {
                 interest in emerging technologies such as esports and artificial
                 intelligence (AI). These exciting realms have caught my
                 attention, and I am constantly seeking opportunities to
-                incorporate them into my projects. By staying up to date with
-                the latest advancements in frontend development and exploring
-                the potential of AI, I aspire to push the boundaries of what is
-                possible and create innovative applications that leverage these
-                cutting-edge technologies.
-              </p>
-              <p>
-                By staying up to date with the latest advancements in frontend
+                incorporate them into my projects. By staying up to date with the latest advancements in frontend
                 development and exploring the potential of AI, I aspire to push
                 the boundaries of what is possible and create innovative
                 applications.
+              </p>
+              <p>
+                  I am currently learning Next.js and actively working on developing my skills in this framework. 
+                  Additionally, I am committed to writing clean code and ensuring its readability by putting forth my best efforts.
               </p>
             </div>
           </div>
