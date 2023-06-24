@@ -1,38 +1,34 @@
-"use client"
+// "use client"
 
-import { Navbar } from '@/components/Navbar'
-import './globals.css'
-import Footer from '@/components/Footer'
-import { ThemeProvider } from 'next-themes'
-import { DarkModeToggle } from '@/components/Buttons/DarkModeButton'
-import { useEffect } from 'react'
+import { Navbar } from "@/components/Navbar";
+import "./globals.css";
+import Footer from "@/components/Footer";
+import { DarkModeToggle } from "@/components/Buttons/DarkModeButton";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
-
-
-  useEffect(() => {
-    document.body.classList.add('transition-colors', 'duration-300');
-    return () => {
-      document.body.classList.remove('transition-colors', 'duration-300');
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.classList.add('transition-colors', 'duration-300');
+  //   return () => {
+  //     document.body.classList.remove('transition-colors', 'duration-300');
+  //   };
+  // }, []);
 
   return (
-    <html lang="en"> 
+    <html lang="en">
       <body>
-        <ThemeProvider attribute='class' >
+        <Providers>
           <Navbar>
             <DarkModeToggle />
           </Navbar>
           {children}
-        </ThemeProvider>
           <Footer />
+        </Providers>
       </body>
     </html>
-  )
+  );
 }

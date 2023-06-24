@@ -20,8 +20,8 @@ export default function Home() {
   
   return (
     <>
-      <header className="m-auto max-w-[880px] text-3xl font-bold mt-[64px] px-4">
-        Hi 👋🏻 I&apos;m Bartosz, and this is my blog. <br />
+      <header className="m-auto max-w-[880px] text-3xl font-bold mt-[64px] px-4 flex flex-col">
+        <span> Hi 👋🏻 I&apos;m Bartosz, and this is my blog. </span>
         <span className='text-silver dark:text-lightGray/60'>Here, I share through my writing my experience as passionate of frontend and everything I&apos;m learning about on html, css, js or even React.</span>
         <div className="flex gap-2 w-full justify-center md:justify-start mt-4 ">
           <ButtonLink href={'/about'}>About Me <HiOutlineExternalLink className="inline"/></ButtonLink>
