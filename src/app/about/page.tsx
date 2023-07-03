@@ -82,8 +82,8 @@ export default function About() {
         />
         <ContactItem
           name="medium"
-          href="https://medium.com/@FuuK"
-          value="@FuuK"
+          href="https://medium.com/@FuuKowatty"
+          value="@FuuKowatty"
         />
         <ContactItem
           name="github"
