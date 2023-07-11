@@ -22,8 +22,8 @@ export default function About() {
           <ButtonLink href={"/"}>
             Home <AiFillHome className="inline" />
           </ButtonLink>
-          <ButtonLink openInNewTab={true} href="https://medium.com/@FuuK">
-            @FuuK <BsMedium className="inline" />
+          <ButtonLink openInNewTab={true} href="https://medium.com/@FuuKowatty">
+            @FuuKowatty <BsMedium className="inline" />
           </ButtonLink>
         </div>
       </Header>
