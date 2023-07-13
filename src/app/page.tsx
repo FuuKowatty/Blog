@@ -25,7 +25,7 @@ export default function Home() {
         <span className='text-silver dark:text-lightGray/60'>Here, I share through my writing my experience as passionate of frontend and everything I&apos;m learning about on html, css, js or even React.</span>
         <div className="flex gap-2 w-full justify-center md:justify-start mt-4 ">
           <ButtonLink href={'/about'}>About Me <HiOutlineExternalLink className="inline"/></ButtonLink>
-          <ButtonLink openInNewTab={true} href='https://medium.com/@FuuK'>@FuuK <BsMedium className="inline"/></ButtonLink>
+          <ButtonLink openInNewTab={true} href='https://medium.com/@FuuKowatty'>@FuuKowatty <BsMedium className="inline"/></ButtonLink>
         </div>
       </header>
       <main className="m-auto 2xl:max-w-[1280px] px-4">
