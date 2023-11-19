@@ -38,11 +38,11 @@ export function NewsLetter() {
           you
         </li>
         <li>
-          Exclusive previews of upcoming articles on frontend development,
-          React, Shaders, React Three Fiber and more.
+          Exclusive previews of upcoming articles on web development,
+          React, Java and more.
         </li>
         <li>
-          Some of my favorite resources and tips on frontend development or
+          Some of my favorite resources and tips on web development or
           anything I&apos;m currently interested in to further expand your
           skillset as a developer
         </li>
