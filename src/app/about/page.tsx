@@ -48,7 +48,7 @@ export default function About() {
             <div className="flex flex-col gap-6 md:border-l-[1px] md:border-lightBlue md:pl-6">
               <p>
                 I am always up to date with the latest technologies because being familiar with it is really important thing for me.
-                I always try to describe my project and solve people's problems through my development skills. Java is really fascinating for me because it is really deep coded language with a lot of optimisation of cpp problems.
+                I always try to describe my project and solve people&apos;s problems through my development skills. Java is really fascinating for me because it is really deep coded language with a lot of optimisation of cpp problems.
               </p>
               <p>
                   I am currently expanding my Java knowledge and regularly creating new projects. 
