@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <header className="m-auto max-w-[880px] text-3xl font-bold mt-[64px] px-4">
         <div className='text-silver dark:text-lightGray/60 flex flex-col'>
-          <span className="text-white">Hi 👋🏻 I&apos;m Bartosz, and this is my blog.</span>
+          <span className="text-white">Hi 👋🏻 I am Bartosz, and this is my blog.</span>
           <span>Here I share through my writing my experience as passionate of web development and everything.</span>
           <span>I write application in React/Java Technologies.</span>
         </div>
