@@ -16,11 +16,11 @@ export function NewsLetter() {
   }
 
   function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
-    e.preventDefault(); // Prevent the default form submission
-      const email = formElement.current?.elements['email'].value;
-      console.log(email);
+      e.preventDefault(); 
+      const formElement = e.currentTarget;
+      const emailInput = formElement.elements.namedItem('email') as HTMLInputElement | null;
   
-      axios.post('http://localhost:8080/send-email', { recipient: email })
+      axios.post('http://localhost:8080/send-email', { recipient: emailInput })
         .then(response => {
           console.log('Email sent successfully!', response.data);
         })
