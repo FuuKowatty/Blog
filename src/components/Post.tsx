@@ -1,4 +1,5 @@
 import { getFormattedDate } from "@/lib/getFormatedDate";
+import { BlogPost } from "@/types/BlogPost";
 import Image from "next/image";
 import Link from "next/link";
 
