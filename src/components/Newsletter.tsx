@@ -20,7 +20,7 @@ export function NewsLetter() {
       const formElement = e.currentTarget;
       const emailInput = formElement.elements.namedItem('email') as HTMLInputElement | null;
   
-      axios.post('http://localhost:8080/send-email', { recipient: emailInput })
+      axios.post('http://13.49.57.142/send-email', { recipient: emailInput })
         .then(response => {
           console.log('Email sent successfully!', response.data);
         })
