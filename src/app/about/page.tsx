@@ -33,35 +33,27 @@ export default function About() {
           <div className="mt-6 text-lg leading-8 grid gap-12 md:gap-0 md:grid-cols-2">
             <div className="flex flex-col gap-6 md:border-r-[1px] md:border-lightBlue md:pr-6">
               <p>
-                I am a passionate frontend enthusiast who started exploring the
-                world of web development in 2020. Frontend development has
-                captured my interest due to its ability to create visually
-                appealing and high-performance applications. I particularly
+                I am a passionate web developer enthusiast who started exploring this world in 2020. 
+                Web development has captured my interest because of its ability to create visually effects
+                and high performance applications. I particularly
                 enjoy designing user interfaces that are both aesthetically
-                pleasing and user-friendly. In addition to my frontend skills, I
-                have a background in IT Technician work, which has provided me
-                with valuable knowledge in data science.
+                and user friendly as well as creating super clean backend structures
+                due to SOLID rules.
               </p>
               <p>
-                As an IT Technician, I have a strong foundation in data science.
-                Combining this expertise with my fresh and modern frontend
-                knowledge, I aim to create the best possible applications.
+                As an IT technician, I have a strong foundation in computer science.
+                Combining this expertise with my fresh and modern web development
+                I aim to create the best possible applications.
               </p>
             </div>
             <div className="flex flex-col gap-6 md:border-l-[1px] md:border-lightBlue md:pl-6">
               <p>
-                In my journey as a frontend developer, I have developed a keen
-                interest in emerging technologies such as esports and artificial
-                intelligence (AI). These exciting realms have caught my
-                attention, and I am constantly seeking opportunities to
-                incorporate them into my projects. By staying up to date with the latest advancements in frontend
-                development and exploring the potential of AI, I aspire to push
-                the boundaries of what is possible and create innovative
-                applications.
+                I am always up to date with the latest technologies because being familiar with new technologies is really important thing for me.
+                I always try to describe my project and solve people's problems through my development skills. Java is really fascinating for me because it is really deep coded language with a lot of optimisation of cpp problems.
               </p>
               <p>
-                  I am currently learning Next.js and actively working on developing my skills in this framework. 
-                  Additionally, I am committed to writing clean code and ensuring its readability by putting forth my best efforts.
+                  I am currently expanding my Java knowledge and regularly creating new projects. 
+                  In addition, I am committed to writing clean code and ensuring its readability to the best of my ability.
               </p>
             </div>
           </div>
