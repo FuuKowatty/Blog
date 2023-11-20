@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Modal } from "./Modal";
 import { ButtonConfirm } from "./Buttons/ButtonConfirm";
 import { useModal } from "@/hooks/useModal";
-import { MouseEvent, useRef } from "react";
+import { FormEventHandler, MouseEvent, SyntheticEvent, useRef } from "react";
+import axios from "axios";
 
 export function NewsLetter() {
   const formElement = useRef<HTMLFormElement>(null)
@@ -14,6 +15,19 @@ export function NewsLetter() {
     closeModal();
   }
 
+  function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
+    e.preventDefault(); // Prevent the default form submission
+      const email = formElement.current?.elements['email'].value;
+      console.log(email);
+  
+      axios.post('http://localhost:8080/send-email', { recipient: email })
+        .then(response => {
+          console.log('Email sent successfully!', response.data);
+        })
+        .finally(() => {
+          openModal(e);
+        });
+  }
 
   return (
     <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray md:dark:border-silver mt-24 md:p-12">
@@ -47,8 +61,8 @@ export function NewsLetter() {
           skillset as a developer
         </li>
       </ul>
-      <form className="mt-8 flex gap-2" onSubmit={openModal} ref={formElement}>
-          <input type="email" aria-label='email'  className="dark:bg-darkGray border-[1px] border-silver rounded-md p-2 w-full" placeholder="example@gmail.com" required/>
+      <form className="mt-8 flex gap-2" onSubmit={handleSubmitNewsletter} ref={formElement}>
+          <input type="email" aria-label='email' name="email"  className="dark:bg-darkGray border-[1px] border-silver rounded-md p-2 w-full" placeholder="example@gmail.com" required/>
           <ButtonConfirm>Subscribe!</ButtonConfirm>
       </form>
       {isModalOpen && 
