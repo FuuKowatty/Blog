@@ -6,6 +6,7 @@ import { ButtonConfirm } from "./Buttons/ButtonConfirm";
 import { useModal } from "@/hooks/useModal";
 import { FormEventHandler, MouseEvent, SyntheticEvent, useRef } from "react";
 import axios from "axios";
+import { headers } from "next/dist/client/components/headers";
 
 export function NewsLetter() {
   const formElement = useRef<HTMLFormElement>(null)
@@ -23,13 +24,19 @@ function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>)
     if (emailInput) {
         const email = emailInput.value;
 
-        axios.post('http://13.49.57.142/send-email', { recipient: email })
-            .then(response => {
-                console.log('Email sent successfully!', response.data);
-            })
-            .finally(() => {
-                openModal(e);
-            });
+        axios.post('http://13.49.57.142/send-email', { recipient: email }, {
+          headers: {
+            "Content-Type": "application/json",
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*'
+          }
+        })
+        .then(response => {
+          console.log('Email sent successfully!', response.data);
+        })
+        .finally(() => {
+          openModal(e);
+        });
     }
 }
   return (
