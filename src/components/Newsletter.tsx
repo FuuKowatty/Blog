@@ -15,20 +15,23 @@ export function NewsLetter() {
     closeModal();
   }
 
-  function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
-      e.preventDefault(); 
-      const formElement = e.currentTarget;
-      const emailInput = formElement.elements.namedItem('email') as HTMLInputElement | null;
-  
-      axios.post('http://13.49.57.142/send-email', { recipient: emailInput })
-        .then(response => {
-          console.log('Email sent successfully!', response.data);
-        })
-        .finally(() => {
-          openModal(e);
-        });
-  }
+function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
+    e.preventDefault(); 
+    const formElement = e.currentTarget;
+    const emailInput = formElement.elements.namedItem('email') as HTMLInputElement | null;
 
+    if (emailInput) {
+        const email = emailInput.value;
+
+        axios.post('http://13.49.57.142/send-email', { recipient: email })
+            .then(response => {
+                console.log('Email sent successfully!', response.data);
+            })
+            .finally(() => {
+                openModal(e);
+            });
+    }
+}
   return (
     <section className="max-w-[880px] m-auto md:border-[1px] md:border-lightGray md:dark:border-silver mt-24 md:p-12">
       <h1>Newsletter</h1>
