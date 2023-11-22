@@ -24,7 +24,7 @@ function handleSubmitNewsletter(e: SyntheticEvent<HTMLFormElement, SubmitEvent>)
     if (emailInput) {
         const email = emailInput.value;
 
-        axios.post('https://13.49.57.142/send-email', { recipient: email }, {
+        axios.post('https://blog-newsletter-backend.onrender.com/send-email', { recipient: email }, {
           headers: {
             "Content-Type": "application/json",
             'Access-Control-Allow-Origin': '*',
